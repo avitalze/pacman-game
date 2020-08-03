@@ -1,0 +1,618 @@
+#menu{
+    text-align: center;
+    background: #76cbda;
+    color: white;
+	font-size: 30px;
+	height: 30px;
+}
+
+body{
+	background: #130e11;
+	margin:0;
+  	padding:0;
+}
+
+#header{
+    background: #130e12;
+}
+
+#names, #logoHeader{
+	display: inline;
+	padding-left: 30px ;
+}
+
+#names{
+	color: rgb(204, 209, 216);
+	font-family: Permanent Marker, sans-serif;
+}
+
+nav{
+	float: center;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li{
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+	
+}
+
+nav a{
+	color: #0e1113;
+	padding: 3px;
+	font-family: Permanent Marker, sans-serif;
+	text-decoration: none;
+	font-style: normal; font-variant: normal; 
+	font-weight: 700; 
+	font-size: 18px;
+}
+
+
+nav a:hover{
+	color: #cf3d2b;
+}
+
+#footer {
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:35px;
+	background:#d69f37;
+	text-align: center;
+	font-family: Permanent Marker, sans-serif;
+	text-decoration: none;
+	font-style: normal; font-variant: normal; 
+	font-weight: 700; 
+	font-size: 14px;
+  }
+
+  #footer p{
+	  padding-top: 2px;
+	  padding-left: 30px;
+	  display: inline;
+  }
+
+  #built
+  {
+	display:inline;
+  }
+
+  #canvas{
+	
+	  border: 8px solid gray;
+	  
+  }
+
+
+  #gameBoard{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* or simply "1fr 1fr;" */
+	grid-column-gap: 30px;
+  }
+
+  #game,#settingsInGame,#gameLine{
+	text-align: center;
+  }
+
+  #game{
+	  padding-left: 30px;
+  }
+
+  #settingsInGame{
+	font-size: 18px;
+	padding-top: 30px;
+  }
+
+	#gameLine
+	{
+		text-align:left;
+		padding-top: 30px;
+	}
+
+  .dot {
+	height: 20px;
+	width: 20px;
+	background-color: rgb(52, 209, 73);
+	border-radius: 50%;
+	display: inline-block;
+	
+  }
+
+
+  #lblScore{
+	background: transparent;
+	border: none;
+	color: wheat;
+	font-family: Permanent Marker, sans-serif;
+	font-size: 26px;
+	width: 150px;
+	padding-left:10 px ;
+  }
+
+  #score label{
+	font-size: 30px;
+	color: #d69f37;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	font-family: Permanent Marker, sans-serif;
+	text-decoration: none;
+	font-style: normal; font-variant: normal; 
+	font-weight: 700; 
+	
+  }
+
+  #lblTime{
+	background: transparent;
+	border: none;
+	color: wheat;
+	font-family: Permanent Marker, sans-serif;
+	font-size: 26px;
+	padding-left: 5px;
+  }
+
+  #time label{
+	font-size: 30px;
+	color: #9840bb;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	font-family: Permanent Marker, sans-serif;
+	text-decoration: none;
+	font-style: normal; font-variant: normal; 
+	font-weight: 700; 
+  }
+
+  #lives label{
+	font-size: 30px;
+	color: #246e86;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	font-family: Permanent Marker, sans-serif;
+	text-decoration: none;
+	font-style: normal; font-variant: normal; 
+	font-weight: 700; 
+  }
+
+  #lives a{
+	font-size: 26px;
+  }
+
+  #usernameLabel{
+	background: transparent;
+	border: none;
+	color: wheat;
+	font-family: Permanent Marker, sans-serif;
+	font-size: 26px;
+  }
+
+  #usernameOnScreen{
+	font-size: 30px;
+	color: #40bb77;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	font-family: Permanent Marker, sans-serif;
+	text-decoration: none;
+	font-style: normal; font-variant: normal; 
+	font-weight: 700; 
+  }
+
+  #newGamebtn{
+	  padding-top: 100px;
+  }
+
+  #settingsInGame h1{
+	font-size: 30px;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	color:#fcc73f;
+	font-family: Permanent Marker, sans-serif;
+	text-decoration: none;
+	font-style: normal; font-variant: normal; 
+	font-weight: 700; 
+  }
+
+  #settingsInGame{
+	background: transparent;
+	border: none;
+	color: #fcc73f;
+	font-family: Permanent Marker, sans-serif;
+	font-size: 20px;
+  }
+
+  #settingsInGame span{
+	background: transparent;
+	border: none;
+	color: white;
+	font-family: Permanent Marker, sans-serif;
+	font-size: 20px;
+  }
+
+  .modal{
+	  background-color: #8ac5b9;
+	  border: 5px white solid;
+	  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	  text-align:center;
+  }
+
+  .modal input[type=button]{
+	background-color:#0e1113;
+	border: none;
+	color: white;
+	padding: 10px 24px;
+	border-radius: 8px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	display: center;
+  }
+
+  #SignInPage{
+	color: white;
+	  left: 50%;
+	  padding-left: 100px;
+ 
+  }
+
+  #SignInPage h1{
+	font-size: 35px;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	color:#fcc73f;
+	font-family: Permanent Marker, sans-serif;
+	text-decoration: none;
+	font-style: normal; font-variant: normal; 
+	font-weight: 700; 
+	padding-left: 30px;
+  }
+
+  #signin-form{
+	text-align:left;
+	left: 50%;
+	width:600px ;
+	height: 370px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+  }
+
+
+  #signin-form label{
+	color: #76cbda;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 20px;
+  }
+
+  #signin-form input{
+	background: transparent;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	color: white;
+	width: 100%;
+	margin: 3px;
+  	padding: 5px 10px;
+	 box-sizing: border-box;
+	 width: 200px;
+
+  }
+  #signin-form select{
+	background: transparent;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	color: #76cbda;
+	width: 100%;
+	margin: 3px;
+  	padding: 5px 10px;
+	 box-sizing: border-box;
+	 width: 200px;
+
+  }
+
+  #signin-form .error { 
+	  color: #df5948;
+	  font-size: 16px;
+}
+
+#signin-form button{
+	background-color:#0e1113;
+	border: 2px white solid;
+	color: white;
+	padding: 10px 24px;
+	border-radius: 8px;
+	text-decoration: none;
+	cursor: pointer;
+	width: 120px;
+	display: block;
+	margin: 0 auto;
+	font-size: 20px;
+}
+
+#signin-form button:hover{
+	background-color:#fcc73f;;
+}
+
+
+#LogInPage{
+color: white;
+text-align:center;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  }
+  
+  #LogInPage h1{
+	font-size: 35px;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	color:#fcc73f;
+	font-family: Permanent Marker, sans-serif;
+	text-decoration: none;
+	font-style: normal; font-variant: normal; 
+	font-weight: 700; 
+	padding: 0px;
+  }
+
+  #LogInPage label{
+	color: #76cbda;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 20px;
+  }
+
+  #LogInPage input{
+	background: transparent;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	color: white;
+	width: 100%;
+	margin: 3px;
+  	padding: 5px 10px;
+	 box-sizing: border-box;
+	 width: 200px;
+
+  }
+
+  #loginButton{
+	background-color:#0e1113;
+	border: 2px white solid;
+	color: white;
+	padding: 10px 24px;
+	border-radius: 8px;
+	text-decoration: none;
+	cursor: pointer;
+	width: 120px;
+	display: center;
+	font-size: 20px;
+}
+
+#loginButton:hover{
+	background-color:#fcc73f;;
+}
+
+
+#startnewGame{
+	background-color:#76cbda;;
+	border: none;
+	padding: 10px 24px;
+	border-radius: 8px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	display: center;
+	color:#0e1113;
+	font-family: Permanent Marker, sans-serif;
+	font-size: 26px;
+  }
+
+  #newGamebtn{
+	display: center;
+  }
+
+  #Settings{
+	color: white;
+	text-align:center;
+	left: 50%;
+	padding-left: 150px;
+		
+  }
+
+  #setting-form{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* or simply "1fr 1fr;" */
+	grid-column-gap: 10px;
+	width: 900px;
+	color: #40bb77;
+	font-family: Permanent Marker, sans-serif;
+	font-size: 20px;
+
+  }
+
+  #Settings h1{
+	font-size: 35px;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	color:#fcc73f;
+	font-family: Permanent Marker, sans-serif;
+	text-decoration: none;
+	font-style: normal; font-variant: normal; 
+	font-weight: 700; 
+	padding-right: 50px;
+  }
+
+  #Settings h2, #otherSettings p{
+	font-size: 25px;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	color:#40bb77;
+	font-family: Permanent Marker, sans-serif;
+	text-decoration: none;
+	font-style: normal; font-variant: normal; 
+	font-weight: 700; 
+	padding: 0px;
+  }
+
+    #setting-form span{
+	  display:inline;
+	  color: white;
+  }
+
+  #otherSettings input{
+	background: transparent;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	color: white;
+	width: 100%;
+	margin: 3px;
+  	padding: 5px 10px;
+	 box-sizing: border-box;
+	 width: 100px;
+
+  }
+
+  #otherSettings input[type="color"]{
+	padding: 5px 10px;
+   box-sizing: border-box;
+   width: 100px;
+
+}
+#Settings .error{
+	color: red;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+  }
+
+  #setting-form .cntrlButton{
+	background-color:#0e1113;
+	border: 1px white solid;
+	padding: 10px 24px;
+	border-radius: 8px;
+	text-decoration: none;
+	margin: 2px 2px;
+	cursor: pointer;
+	display: center;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 20px;
+	color: white;
+  }
+
+
+  #setting-form .buttonSet{
+	background-color:#0e1113;
+	border: 1px white solid;
+	padding: 0px;
+	border-radius: 8px;
+	text-decoration: none;
+	margin: 2px 2px;
+	cursor: pointer;
+	display: center;
+	font-family: Permanent Marker, sans-serif;
+	font-size: 20px;
+	color: white;
+  }
+  
+  #AboutPage{
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 14;
+	text-align:left;
+  }
+
+  .wrapperButtons{
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 65%;
+
+	
+  }
+
+
+
+  #setting-form .buttonSet:hover{
+	background-color:#fcc73f;
+	color: black;
+  }
+  #setting-form select{
+	background: transparent;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	color: #40bb77;
+	width: 100%;
+	margin: 3px;
+  	padding: 5px 10px;
+	 box-sizing: border-box;
+	 width: 200px;
+
+  }
+
+  #setting-form .error { 
+	color: #df5948;
+	font-size: 16px;
+}
+
+  .welcomeButton {
+	background-color: rgb(245, 4, 4);
+	border: 10px white;
+	
+	color: rgb(255, 255, 255);
+	padding: 30px 10px;
+	text-align: center;
+	text-decoration: white;
+	display: inline-block;
+	font-size: 20px;
+	
+	cursor: pointer;
+	font-family: Permanent Marker, sans-serif;
+	width: 130px;
+	cursor: pointer;
+	border-radius: 50%;
+	margin-right: 20px;
+	
+	/* margin: 4px 2px; */
+  }
+
+  .welcomeButton:hover {
+	background-color:#76cbda;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+#leftImage{
+	width: 400px;
+	height: 230px;
+	top:200px; left:20px;
+	position:absolute;
+	z-index:1;
+	transform: rotate(-33deg);
+}
+
+  #WelcomeScreen{
+	/* background: url(back.jpg) top repeat; */
+	/* background-image: url('back.jpg');
+	 height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+	  background-size: initial;   */
+	  width: 100%;
+	  height: 100vh;
+	  background-image: url('back3.PNG');
+	  float:right;
+	background-size: cover;
+	background-size: 100% 150%;
+		
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index:2;
+		/* background-image: url(back.PNG);
+	
+	
+	height: 100%;
+   
+	font-family:Arial, Helvetica, sans-serif; 
+	background-position: center;
+	
+	background-attachment: fixed; */
+
+
+		
+	  }
+  

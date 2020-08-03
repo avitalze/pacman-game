@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="./jquery-3.4.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+		<script type="text/javascript" src="./app.js"></script>
+		<script type="text/javascript" src="./form.js"></script>
+		<script type="text/javascript" src="./switchpages.js"></script>
+		<script type="text/javascript" src="./settings.js"></script>
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<header id="header">
+			<img id="logoHeader" class="logo" src="pacman header.png" width="300px" height="60px">
+			<a id="names">By :   Avital Zehavi & Or Alfasi</a>
+		</header>
+		<header>
+			<div id="menu">
+			  <nav>
+				<ul>
+				  <li><a href="#WelcomeScreen" onclick="menuToWelcome()">Welcome</a></li>
+				  <li><a href="#SignInPage" onclick="menuToSignIn()">Sign In</a></li>
+				  <li><a href="#LogInPage" onclick="menuToLogIn()">Log In</a></li>
+				  <li><a href="#AboutPage" onclick="menuToAbout()">About</a></li>
+				</ul>
+			  </nav>
+		
+		
+			</div>
+		  </header>
+		<div id="WelcomeScreen" >
+			<img src="pacman header.png" id="leftImage"/>
+			<div class="wrapperButtons">
+				<input id="SignIn" class="welcomeButton" type="button" value="Sign In" onclick="clickSignIn()"/>
+			<input id="LogIn" type="button" class="welcomeButton" value="Log In" onclick="clickLogIn()"/>
+			<!-- <input id="GameButton" type="button" class="welcomeButton" value="go to game" onclick="gotogame()"/> -->
+			</div>
+			</div>
+		<div id="SignInPage" style="display: none;" >
+			<h1>Sign In</h1>
+			<form id="signin-form" action="" name="registration">
+
+				<label for="firstname">First Name</label>
+				<input type="text" name="firstname" id="firstname" autocomplete="off"/>
+				<br>
+				<label for="lastname">Last Name</label>
+				<input type="text" name="lastname" id="lastname"  autocomplete="off" />
+				<br>
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" autocomplete="off" />
+				<br>
+				<label for="birthday">Birth Date</label>
+
+				<br>
+				<select name="day" id="day">
+					<option value="0">  - Day - </option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+				</select>
+				<br>
+				<select name="month">
+					<option value="0"> - Month - </option>
+					<option value="1">January</option>
+					<option value="2">Febuary</option>
+					<option value="3">March</option>
+					<option value="4">April</option>
+					<option value="5">May</option>
+					<option value="6">June</option>
+					<option value="7">July</option>
+					<option value="8">August</option>
+					<option value="9">September</option>
+					<option value="10">October</option>
+					<option value="11">November</option>
+					<option value="12">December</option>
+				</select>
+				<br>
+				<select name="year">
+					<option value="0"> - Year - </option>
+					<option value="2010">2010</option>
+					<option value="2009">2009</option>
+					<option value="2008">2008</option>
+					<option value="2007">2007</option>
+					<option value="2006">2006</option>
+					<option value="2005">2005</option>
+					<option value="2004">2004</option>
+					<option value="2003">2003</option>
+					<option value="2002">2002</option>
+					<option value="2001">2001</option>
+					<option value="2000">2000</option>
+					<option value="1999">1999</option>
+					<option value="1998">1998</option>
+					<option value="1997">1997</option>
+					<option value="1996">1996</option>
+					<option value="1995">1995</option>
+					<option value="1994">1994</option>
+					<option value="1993">1993</option>
+					<option value="1992">1992</option>
+					<option value="1991">1991</option>
+					<option value="1990">1990</option>
+					<option value="1989">1989</option>
+					<option value="1988">1988</option>
+					<option value="1987">1987</option>
+					<option value="1986">1986</option>
+					<option value="1985">1985</option>
+					<option value="1984">1984</option>
+					<option value="1983">1983</option>
+					<option value="1982">1982</option>
+					<option value="1981">1981</option>
+					<option value="1980">1980</option>
+					<option value="1979">1979</option>
+					<option value="1978">1978</option>
+					<option value="1977">1977</option>
+					<option value="1976">1976</option>
+					<option value="1975">1975</option>
+					<option value="1974">1974</option>
+					<option value="1973">1973</option>
+					<option value="1972">1972</option>
+					<option value="1971">1971</option>
+					<option value="1970">1970</option>
+					<option value="1969">1969</option>
+					<option value="1968">1968</option>
+					<option value="1967">1967</option>
+					<option value="1966">1966</option>
+					<option value="1965">1965</option>
+					<option value="1964">1964</option>
+					<option value="1963">1963</option>
+					<option value="1962">1962</option>
+					<option value="1961">1961</option>
+				</select>
+				<br>
+				<label for="username">UserName</label>
+				<input type="username" name="username" id="username" autocomplete="off"/>
+				<br>
+				<label for="password">Password</label>
+				<input type="password" name="password" id="password" autocomplete="off"/>
+		
+				<button type="submit">Register</button>
+			
+			  </form>
+			  <div id="signInOK" class="modal">
+				<p>You sucssesfuly signed in! Now you can Log in to the game</p>
+				<input type="button" name="gotoSettingsFromSignIn" id="gotoSettingsFromSignIn" value="Go To Settings!" onclick="goToLogInFromSignIn()"/>
+			</div>
+			<div id="signInNotOK" class="modal">
+				<p>There is already a user with the same username, Please try again</p>
+			</div>
+		</div>
+
+		<div id="LogInPage" style="display: none;" >
+			<h1>log in</h1>
+
+			<label for="usernameLogIn">UserName</label>
+			<input type="username" name="usernameLogIn" id="usernameLogIn"/>
+			<br>
+			<label for="passwordLogIn">Password</label>
+			<input type="password" name="passwordLogIn" id="passwordLogIn"/>
+			<br>
+			<input id="loginButton" type="button" value="Log In" onclick="checkUser()"/>
+		
+			<div id="logInOK" class="modal">
+				<p>You sucssesfuly logged in!</p>
+				<input type="button" name="gotoSettingsFromLogin" id="gotoSettingsFromLogin" value="Go To Settings!" onclick="clickToSettings()"/>
+			</div>
+			<div id="logInNotOK" class="modal">
+				<p>Username or password not exists, Please try again</p>
+			</div>
+		</div>
+
+		<div id="Settings" style="display: none;" >
+			<h1>Game Settings</h1>
+			<form id="setting-form"  name="registration">
+				<div id="controlls">
+					<h2>Choose Key controls</h2>
+			<input class="cntrlButton" type="button" name="rightkey" id="rightkey" value="choose right key" onclick="rightButtonclick()"/>
+			<span class="error" id="errorR" style="display: none;"> all keys should be different</span>
+			
+			Selected: <span id="rk" name="rk" >none</span>
+			<br>
+			<input class="cntrlButton" type="button" name="leftkey" id="leftkey" value="choose left key" onclick="leftButtonclick()"/>
+			<span class="error" id="errorL" style="display: none;"> all keys should be different</span>
+			
+			Selected: <span id="lk">none</span>
+			<br>
+			<input class="cntrlButton" type="button" name="upkey" id="upkey" value="choose up key" onclick="upButtonclick()"/>
+			<span class="error" id="errorU" style="display: none;"> all keys should be different</span>
+			
+			Selected: <span id="uk">none</span>
+			<br>
+			<input class="cntrlButton" type="button" name="downkey" id="downkey" value="choose down key" onclick="downButtonclick()"/>
+			<span class="error" id="errorD" style="display: none;"> all keys should be different</span>
+			
+			Selected: <span id="dk">none</span>
+	
+				</div>
+			
+				<div id="otherSettings">
+					<label for="numofBalls">Choose Number of Balls</label>
+				<input type="number" name="numofBalls" id="numofBalls" value="50">
+			<br>
+				<label for="gamelength">Game length in Seconds<label>
+				<input type="number" name="gamelength" id="gamelength" value="60">
+				<br>
+				<label for="numofGhosts">Number of Ghosts</label>
+				<select name="numofGhosts" id="numofGhosts">
+					<option value="0">--Select--</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+				<br>
+				<p> Choose ball colors</p>
+				<input type="color" id="5point" name="5point" value="#FFFF00">
+				<label for="5point">5 point</label>
+				
+				<input type="color" id="10point" name="10point" value="#FF0000">
+				<label for="10point">15 point</label>
+				
+				<input type="color" id="15point" name="15point" value="#0000FF">
+				<label for="15point">25 point</label>
+				
+				<br>
+				<br>
+				<input class="buttonSet" type="button" name="randomSettings" id="randomSettings" value="Random" onclick="differentName()"/>
+				<input class="buttonSet" type="submit" name="submitSettings" id="submitSettings" value="Submit" />
+			</form>
+			<div id="errorSettings" class="modal">
+				<p>error!!!</p>
+				<input type="button" name="closeError" id="closeError" value="Close" onclick="closeModal()"/>
+			</div>
+			<div id="gotogame" class="modal">
+				<p>great!! lets start playing</p>
+				<input type="button" name="gotogame" id="gotogame" value="Lets Start!" onclick="StartGame()"/>
+			</div>
+				</div>
+		</div>
+		<div id="AboutPage" class="modal">
+			<p> &#127802;  &#127802;  &#127802;  &#127802;  &#127802;  &#127802;  &#127802;  &#127802;  &#127802;  &#127802;  &#127802;  &#127802;</p>
+			<p>- Developers name: Or Alfasi, Avital Zehavi. &#128522;</p>
+			<p>- Using jQuery Plugin: 	</p>
+			<p># jQuery Modal - for popups windows. </p>
+			<p># jQuery Validation - for validate the data received by the user in a registration form and settings. </p>
+			<p>- This is the first time we are building a site of this magnitude in the course. This project requires attention to the small details, both in terms of logic and design. </p>
+			<p>- We didn't use Template. </p>
+			<input type="button" name="closeAbout" id="closeAbout" value="Close" onclick="closeAbout()"/>
+		</div>
+
+		<div id="gamePage" style="display: none;" >
+
+			<div id="gameBoard">
+				<div id="game">
+				<canvas id="canvas" height="480" width="480"></canvas>
+				</div>
+				
+				<div id="gameLine">
+				<div id="score">
+				<label for="lblScore">SCORE:</label>
+				<input id="lblScore" type="text" />
+				</div>
+				<div id="time">
+				<label for="lblTime">TIME:</label>
+				<input id="lblTime" type="text" />
+				</div>
+				<div id="lives">
+					<label for="lblTime">LIVES LEFT:</label>
+					<a id="life1">&#128151;</a>
+					<a id="life2">&#128156;</a>
+					<a id="life3">&#128155;</a>
+					<a id="life4">&#128154;</a>
+					<a id="life5">&#128153;</a>
+					</div>
+				<div id="usernameTitle">
+				<label id="usernameOnScreen" for="usernameLabel">USER NAME:</label>
+				<label id="usernameLabel"></label>
+				</div>
+				<div id="newGamebtn">
+					<input type="button" name="startnewGame" id="startnewGame" value="Start New Game" onclick="openNewGameModal()"/>
+				</div>
+				<div id="newGame" class="modal">
+					<p>Let's Start Playing!</p>
+					<input type="button" name="newGame" id="newGame" value="New Game" onclick="StartNewGame()"/>
+				</div>
+			</div>
+				<div id="settingsInGame">
+					<h1>Game Settings</h1>
+					Right Key: <span id="rcontrol" name="rk" ></span>
+					<br>
+					Left Key: <span id="lcontrol"></span>
+					<br>
+					Up Key: <span id="ucontrol" name="rk" ></span>
+					<br>
+					Down Key: <span id="dcontrol"></span>
+					<br>
+					Number of Balls in Game: <span id="ballLabel"></span>
+					<br>
+					Total Game Time In Seconds: <span id="timeLabel"></span>
+					<br>
+					Number Of Ghosts : <span id="ghostLabel"></span>
+					<br>
+					5 Point Color : <span class="dot" id="5colorCircle"></span>
+					<br>
+					15 Point Color : <span class="dot" id="15colorCircle"></span>
+					<br>
+					25 Point Color : <span class="dot" id="25colorCircle"></span>
+					<br><br>
+				</div>
+			
+			
+			</div>
+		
+		<div id="ghostImage"> 
+			<img id="ghost" width="220" height="277" src="ghost1-nobackround.png" alt="The ghost pacman" style="display: none;">
+		 </div>
+		 <div id="appleImg"> 
+			<img id="apple" width="220" height="277" src="apple.png" alt="apple 50" style="display: none;">
+		 </div>
+		 <div id="pillImg"> 
+			<img id="pill" width="220" height="277" src="pillLife.png" alt="pill life" style="display: none;">
+		 </div>
+		 <div id="clockImg"> 
+			<img id="clock" width="220" height="277" src="clock-noback.png" alt="clock pill" style="display: none;">
+		 </div>
+		<div id="x"> 
+		</div>
+		<div id="pacmanDie" class="modal">
+			<p>You have been eaten by a ghost!!! you have still have more lives left!</p>
+			<input type="button" name="keepPlaying" id="keepPlaying" value="Keep Playing" onclick="pacmanDies()"/>
+		</div>
+		<div id="endOfGameNoLives" class="modal">
+			<p id="endofgamepoints"></p>
+		</div>
+		<div id="timeUplessthan100" class="modal">
+			<p id="lessthan100"></p>
+		</div>
+		<div id="winnerMoreThan100Points" class="modal">
+			<p id="morethan100"></p>
+		</div>
+		<div id="timeUpMorethan100" class="modal">
+			<p id="morethan100timeup"></p>
+		</div>
+		</div>
+		<footer>
+			<div id="footer">
+			<div id="built">
+				<p>Built with HTML5.</p>
+				<p>Contact Us: oralfasi09@gmail.com or avitalze57@gmail.com</p>
+			</div>
+			</div>
+		</footer>
+	</body>
+</html>
